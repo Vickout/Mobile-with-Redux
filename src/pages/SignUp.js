@@ -12,7 +12,7 @@ export default function SignIn() {
     async function handleSubmit(data, { reset }) {
         try {
             const schema = Yup.object().shape({
-                nome: Yup.string().required('O nome é obrigatório!'),
+                name: Yup.string().required('O nome é obrigatório!'),
                 email: Yup.string().email('Digite um e-mail válido').required('O e-mail é obrigatório!'),
                 password: Yup.string().min(4, 'No mínimo 4 caracteres').required('A senha é obrigatória!')
             });
@@ -47,7 +47,7 @@ export default function SignIn() {
                     style={styles.logo}
                     source={{ uri: "https://aberturadecontas.eaglebankdigital.com/img/logo-eagle-azul.png" }}
                 />
-                <Input name="email" label='Nome Completo' placeholder="Digite seu nome" />
+                <Input name="name" label='Nome Completo' placeholder="Digite seu nome" />
                 <Input name="email" label='E-mail' placeholder="Digite seu e-mail" type="emailAddress" />
                 <Input name="password" label='Senha' placeholder="Digite sua senha" type="password" />
 
