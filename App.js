@@ -1,19 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import SignIn from './src/pages/SignIn';
+import { Provider } from 'react-redux';
+
+import Routes from './src/routes';
+import store from './src/store';
 
 export default function App() {
   return (
-    <SignIn />
+    <Provider store={store}>
+      <Routes />
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
