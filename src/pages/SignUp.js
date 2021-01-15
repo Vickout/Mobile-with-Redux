@@ -47,12 +47,29 @@ export default function SignIn() {
                     style={styles.logo}
                     source={{ uri: "https://aberturadecontas.eaglebankdigital.com/img/logo-eagle-azul.png" }}
                 />
-                <Input name="name" label='Nome Completo' placeholder="Digite seu nome" />
-                <Input name="email" label='E-mail' placeholder="Digite seu e-mail" type="emailAddress" />
-                <Input name="password" label='Senha' placeholder="Digite sua senha" type="password" />
+                <Input 
+                    name="name" 
+                    label='Nome Completo' 
+                    placeholder="Digite seu nome" 
+                />
+                <Input 
+                    name="email" 
+                    label='E-mail' 
+                    placeholder="Digite seu e-mail" 
+                    keyboardType="email-address"
+                    autoCapitalize="none"
+                />
+                <Input 
+                    name="password" 
+                    label='Senha' 
+                    placeholder="Digite sua senha" 
+                    type="password"
+                    textContentType="password"
+                    secureTextEntry={true} 
+                />
 
                 <TouchableOpacity style={styles.submitButton} onPress={() => formRef.current.submitForm()}>
-                    <Text style={styles.submitButtonText}>SignUp</Text>
+                    <Text style={styles.submitButtonText}>Sign Up</Text>
                 </TouchableOpacity>
             </Form>
         </KeyboardAvoidingView>
