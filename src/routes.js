@@ -3,8 +3,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from '@react-navigation/stack';
 
 import SignIn from './pages/SignIn';
-import SignIn from './pages/SignUp';
-import SignIn from './pages/Begin';
+import SignUp from './pages/SignUp';
+import Begin from './pages/Begin';
+import Main from './pages/Main';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -23,6 +24,10 @@ export default function Routes() {
                 <Screen 
                     name="SignUp" 
                     component={SignUp}    
+                />
+                <Screen 
+                    name="Main" 
+                    component={Main}    
                 />
             </Navigator>
         </NavigationContainer>
