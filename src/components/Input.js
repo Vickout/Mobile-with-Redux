@@ -50,7 +50,7 @@ function Input({ name, label, ...rest }) {
 
             />
             
-            {error && <Text>{error}</Text>}
+            {error && <Text style={styles.textError} >{error}</Text>}
         </>
     );
 }
@@ -59,10 +59,11 @@ const styles = StyleSheet.create({
     label: {
         fontWeight: 'bold',
         marginBottom: 5,
+        marginTop: 15,
+        color: '#005580',
     },
 
     input: {
-        marginBottom: 15,
         paddingHorizontal: 12,
         paddingVertical: 16,
         borderRadius: 4,
@@ -71,6 +72,10 @@ const styles = StyleSheet.create({
         fontSize: 15,
         color: '#444',
     },
+
+    textError: {
+        color: '#ee0000'
+    }
 });
 
 export default Input;
