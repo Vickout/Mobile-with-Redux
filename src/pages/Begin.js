@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, Image, KeyboardAvoidingView, StyleSheet, View } from 'react-native';
 
-export default function Begin() {
+export default function Begin({ navigation }) {
     return (
         <KeyboardAvoidingView style={styles.container}>
             <Image
@@ -9,10 +9,10 @@ export default function Begin() {
                 source={{ uri: "https://aberturadecontas.eaglebankdigital.com/img/logo-eagle-azul.png" }}
             />
             <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.signInButton} onPress={() => { }}>
+                <TouchableOpacity style={styles.signInButton} onPress={() => navigation.navigate('SignIn') }>
                     <Text style={styles.signInTextButton}>Sign In</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.signUpButton} onPress={() => { }}>
+                <TouchableOpacity style={styles.signUpButton} onPress={() => navigation.navigate('SignUp') }>
                     <Text style={styles.signUpTextButton}>Sign Up</Text>
                 </TouchableOpacity>
             </View>
